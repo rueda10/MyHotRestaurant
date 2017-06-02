@@ -19,14 +19,14 @@ app.use(bodyParser.json({
 
 //Routing
 app.get('/', function(req, res) {
-    res.sendFile(path.join(__dirname, 'home.html'));
+    res.sendFile(path.join(__dirname, '/app/public/home.html'));
 });
 app.get('/tables', function(req, res) {
-    res.sendFile(path.join(__dirname, 'tables.html'));
+    res.sendFile(path.join(__dirname, '/app/public/tables.html'));
     res.json(tables);
 });
 app.get('/reserve', function(req, res) {
-    res.sendFile(path.join(__dirname, 'reserve.html'));
+    res.sendFile(path.join(__dirname, '/app/public/reserve.html'));
 });
 app.get('/api/tables', function(req, res) {
     var tables = tablejs(req.body);
