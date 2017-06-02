@@ -1,11 +1,13 @@
 var tables = [
     {
-       name: 'Placeholder',
+       customerName: 'Placeholder',
        guests: 6 
-    }];
+    }
+];
 
 module.exports = function(newTable) {
-    if (newTable) {
+    console.log(newTable);
+    if (newTable.customerName) {
         tables.push(newTable);        
     }
     return tables;

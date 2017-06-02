@@ -35,11 +35,6 @@
                     <h4 class="panel-title">Current Reservations</h4>
                 </div>
                 <div class="panel-body" id="tableSection">
-                    <ul>
-                        <li>1 ricardo</li>
-                        <li>2 jaime</li>
-                        <li>3 domingo</li>
-                    </ul>
                 </div>
             </div>
 
@@ -72,6 +67,7 @@
 
     $.get("/api/tables",function(data){
 
+        console.log(data);
         var ulTables = $("<ul>");
         var ulWait = $("<ul>");
 
@@ -80,7 +76,7 @@
 
             var li = $("<li>");
 
-            li.append(data[x]);
+            li.append(data[x].customerName);
 
 
             if(x<=4){

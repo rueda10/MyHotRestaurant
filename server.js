@@ -2,7 +2,7 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var path = require('path');
-var tablejs = require('./tables.js');
+var tablejs = require('./tables');
 
 //Express app
 var app = express();
@@ -23,7 +23,7 @@ app.get('/', function(req, res) {
 });
 app.get('/tables', function(req, res) {
     res.sendFile(path.join(__dirname, '/app/public/tables.html'));
-    res.json(tables);
+    //res.json(tablejs());
 });
 app.get('/reserve', function(req, res) {
     res.sendFile(path.join(__dirname, '/app/public/reserve.html'));
